@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Jegatheeswaran S</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #495057;
+            --bg-gradient: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            min-height: 100vh;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+
+        .college-logo {
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .menu {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            bottom: -75px;
+            left: -75px;
+        }
+        
+        .menu-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .menu-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .menu-link {
+            flex: 1 1 150px;
+            background: var(--light);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .menu-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.3);
+        }
+        
+        .icon {
+            font-size: 24px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--primary);
+        }
+        
+        .gallery-container::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .gallery-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery-description {
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(67, 97, 238, 0.2);
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background-color: #e9ecef;
+        }
+        
+        .gallery-caption {
+            background: rgba(33, 37, 41, 0.8);
+            color: white;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .gallery-caption-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-caption-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .gallery-category {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--accent);
+        }
+        
+        .gallery-category::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .category-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .filter-button {
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            border: none;
+            background: var(--light);
+            color: var(--dark);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .filter-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .video-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--primary);
+        }
+        
+        .video-section::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .video-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(67, 97, 238, 0.2);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #e9ecef;
+        }
+        
+        .video-info {
+            padding: 1rem;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-description {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 5px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .lightbox-caption {
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        footer {
+            background: var(--bg-gradient);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="college-logo">AAA College of Engineering and Technology</div>
+        <h1 class="page-title">Gallery</h1>
+        <p class="page-subtitle">Jegatheeswaran S | B.Tech Information Technology</p>
+    </header>
+
+    <div class="container">
+        <div class="menu">
+            <h2 class="menu-title">Quick Navigation</h2>
+            <div class="menu-links">
+                <a href="index.html" class="menu-link">
+                    <div class="icon">🏠</div>
+                    Home
+                </a>
+                <a href="profile.html" class="menu-link">
+                    <div class="icon">👤</div>
+                    Profile
+                </a>
+                <a href="academics.html" class="menu-link">
+                    <div class="icon">📚</div>
+                    Academics
+                </a>
+                <a href="gallery.html" class="menu-link">
+                    <div class="icon">🖼️</div>
+                    Gallery
+                </a>
+                <a href="projects.html" class="menu-link">
+                    <div class="icon">💻</div>
+                    Projects
+                </a>
+                <a href="contact.html" class="menu-link">
+                    <div class="icon">📞</div>
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-category">
+            <h2 class="category-title">Photo Gallery</h2>
+            <div class="filter-buttons">
+                <button class="filter-button active">All</button>
+                <button class="filter-button">College Events</button>
+                <button class="filter-button">Hackathons</button>
+                <button class="filter-button">Tech Fests</button>
+                <button class="filter-button">Workshops</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Code Sprint 2023" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Code Sprint 2023</h3>
+                        <p class="gallery-caption-text">Won first place in the college coding competition</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Web Development Workshop" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Web Dev Workshop</h3>
+                        <p class="gallery-caption-text">Conducting a hands-on session for juniors</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="IoT Project Exhibition" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">IoT Project Exhibition</h3>
+                        <p class="gallery-caption-text">Smart Home Automation project demo</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Tech Fest 2023" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Tech Fest 2023</h3>
+                        <p class="gallery-caption-text">Annual technical festival participation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="AI Workshop" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">AI Workshop</h3>
+                        <p class="gallery-caption-text">Learning machine learning algorithms</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Industry Visit" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Industry Visit</h3>
+                        <p class="gallery-caption-text">Visit to TCS Innovation Labs</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Hackathon 2024" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Hackathon 2024</h3>
+                        <p class="gallery-caption-text">36-hour coding challenge with team</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Paper Presentation" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Paper Presentation</h3>
+                        <p class="gallery-caption-text">Presenting research at symposium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2 class="gallery-title">Project Videos</h2>
+            <div class="gallery-description">
+                Documentation of various academic and personal projects through video demonstrations.
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-container">
+                        <img src="/api/placeholder/500/300" alt="Smart Home Project Demo" style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Smart Home Automation Project</h3>
+                        <p class="video-description">Demonstration of IoT-based home automation system using Arduino and sensors.</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-container">
+                        <img src="/api/placeholder/500/300" alt="Web App Development" style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Student Management System</h3>
+                        <p class="video-description">Full-stack web application for managing student records and performance.</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-container">
+                        <img src="/api/placeholder/500/300" alt="Mobile App Demo" style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Campus Navigator App</h3>
+                        <p class="video-description">Mobile application for helping students navigate the college campus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <h2 class="gallery-title">Certifications & Achievements</h2>
+            <div class="gallery-description">
+                A showcase of various certifications, awards, and recognition received during my academic journey.
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="AWS Certification" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">AWS Certified Developer</h3>
+                        <p class="gallery-caption-text">Completed in January 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Python Certification" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Python Data Science</h3>
+                        <p class="gallery-caption-text">Certification from DataCamp</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Hackathon Winner" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Hackathon Winner</h3>
+                        <p class="gallery-caption-text">First place at Regional Hackathon</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Research Publication" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3 class="gallery-caption-title">Research Publication</h3>
+                        <p class="gallery-caption-text">Paper on Data Algorithms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox">
+        <button class="lightbox-close">×</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Jegatheeswaran S | B.Tech Information Technology</p>
+        <p>AAA College of Engineering and Technology</p>
+        <div class="social-links">
+            <a href="#" class="social-link">📱</a>
+            <a href="#" class="social-link">📧</a>
+            <a href="#" class="social-link">🔗</a>
+            <a href="#" class="social-link">📄</a>
+        </div>
+    </footer>
+</body>
+</html>

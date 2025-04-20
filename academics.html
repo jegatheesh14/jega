@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Jegatheeswaran S</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #495057;
+            --bg-gradient: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            min-height: 100vh;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+
+        .college-logo {
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .menu {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            bottom: -75px;
+            left: -75px;
+        }
+        
+        .menu-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .menu-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .menu-link {
+            flex: 1 1 150px;
+            background: var(--light);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .menu-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.3);
+        }
+        
+        .icon {
+            font-size: 24px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .academic-summary {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--primary);
+        }
+        
+        .academic-summary::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .summary-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .summary-item {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid var(--primary);
+        }
+        
+        .summary-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .summary-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .summary-label {
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .semester-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--accent);
+        }
+        
+        .semester-container::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .semester-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .semester-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .semester-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .semester-gpa {
+            background: var(--light);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--primary);
+            border: 2px solid rgba(67, 97, 238, 0.1);
+        }
+        
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .course-table th {
+            background: var(--light);
+            color: var(--dark);
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .course-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .course-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .course-table tr:hover {
+            background: rgba(248, 249, 250, 0.5);
+        }
+        
+        .grade {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .grade-a {
+            background: #38b000;
+        }
+        
+        .grade-b {
+            background: #70e000;
+        }
+        
+        .grade-c {
+            background: #ffd500;
+        }
+        
+        .achievements-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--primary);
+        }
+        
+        .achievements-container::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            top: -100px;
+            left: -100px;
+        }
+        
+        .achievements-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .achievement-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-bottom: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .achievement-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .achievement-title {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .achievement-date {
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .achievement-desc {
+            color: var(--text);
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid var(--accent);
+        }
+        
+        .chart-container::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.1;
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .chart-title {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chart {
+            display: flex;
+            height: 300px;
+            position: relative;
+            z-index: 1;
+            padding-top: 20px;
+            align-items: flex-end;
+            justify-content: space-around;
+        }
+        
+        .chart-bar {
+            width: 60px;
+            background: var(--primary);
+            border-radius: 6px 6px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-bar:hover {
+            background: var(--secondary);
+            transform: translateY(-10px);
+        }
+        
+        .chart-label {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        .chart-value {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        footer {
+            background: var(--bg-gradient);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart {
+                height: 200px;
+            }
+            
+            .chart-bar {
+                width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="college-logo">AAA College of Engineering and Technology</div>
+        <h1 class="page-title">Academic Records</h1>
+        <p class="page-subtitle">Jegatheeswaran S | B.Tech Information Technology</p>
+    </header>
+
+    <div class="container">
+        <div class="menu">
+            <h2 class="menu-title">Quick Navigation</h2>
+            <div class="menu-links">
+                <a href="index.html" class="menu-link">
+                    <div class="icon">🏠</div>
+                    Home
+                </a>
+                <a href="profile.html" class="menu-link">
+                    <div class="icon">👤</div>
+                    Profile
+                </a>
+                <a href="academics.html" class="menu-link">
+                    <div class="icon">📚</div>
+                    Academics
+                </a>
+                <a href="gallery.html" class="menu-link">
+                    <div class="icon">🖼️</div>
+                    Gallery
+                </a>
+                <a href="projects.html" class="menu-link">
+                    <div class="icon">💻</div>
+                    Projects
+                </a>
+                <a href="contact.html" class="menu-link">
+                    <div class="icon">📞</div>
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="academic-summary">
+            <h2 class="summary-title">Academic Overview</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-value">8.9</div>
+                    <div class="summary-label">Current CGPA</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">9.2</div>
+                    <div class="summary-label">Highest SGPA (Sem 3)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">20</div>
+                    <div class="summary-label">Courses Completed</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">85%</div>
+                    <div class="summary-label">Attendance Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="chart-title">Semester-wise Performance</h2>
+            <div class="chart">
+                <div class="chart-bar" style="height: 65%;">
+                    <div class="chart-value">8.5</div>
+                    <div class="chart-label">Sem 1</div>
+                </div>
+                <div class="chart-bar" style="height: 68%;">
+                    <div class="chart-value">8.8</div>
+                    <div class="chart-label">Sem 2</div>
+                </div>
+                <div class="chart-bar" style="height: 72%;">
+                    <div class="chart-value">9.2</div>
+                    <div class="chart-label">Sem 3</div>
+                </div>
+                <div class="chart-bar" style="height: 70%;">
+                    <div class="chart-value">9.0</div>
+                    <div class="chart-label">Sem 4</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="semester-container">
+            <h2 class="semester-title">Current Semester Details</h2>
+            <div class="semester-header">
+                <div class="semester-name">Fourth Semester (2023-2024)</div>
+                <div class="semester-gpa">SGPA: 9.0</div>
+            </div>
+            
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IT401</td>
+                        <td>Database Management Systems</td>
+                        <td>4</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT402</td>
+                        <td>Computer Networks</td>
+                        <td>4</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT403</td>
+                        <td>Operating Systems</td>
+                        <td>3</td>
+                        <td><span class="grade grade-b">B+</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT404</td>
+                        <td>Web Technologies</td>
+                        <td>4</td>
+                        <td><span class="grade grade-a">A+</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT405</td>
+                        <td>Software Engineering</td>
+                        <td>3</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT406</td>
+                        <td>Professional Ethics</td>
+                        <td>2</td>
+                        <td><span class="grade grade-b">B</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="semester-container">
+            <h2 class="semester-title">Previous Semester Details</h2>
+            <div class="semester-header">
+                <div class="semester-name">Third Semester (2023-2024)</div>
+                <div class="semester-gpa">SGPA: 9.2</div>
+            </div>
+            
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IT301</td>
+                        <td>Data Structures and Algorithms</td>
+                        <td>4</td>
+                        <td><span class="grade grade-a">A+</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT302</td>
+                        <td>Object Oriented Programming</td>
+                        <td>4</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT303</td>
+                        <td>Computer Architecture</td>
+                        <td>3</td>
+                        <td><span class="grade grade-b">B+</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT304</td>
+                        <td>Mathematical Foundations for IT</td>
+                        <td>3</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT305</td>
+                        <td>Digital Logic Design</td>
+                        <td>3</td>
+                        <td><span class="grade grade-a">A+</span></td>
+                    </tr>
+                    <tr>
+                        <td>IT306</td>
+                        <td>Technical Communication</td>
+                        <td>2</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="achievements-container">
+            <h2 class="achievements-title">Academic Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-title">Dean's List</div>
+                    </div>
+                    <div class="achievement-date">Fall 2023</div>
+                    <div class="achievement-desc">Recognized for academic excellence with placement on the Dean's List for maintaining a GPA above 9.0 for two consecutive semesters.</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">🥇</div>
+                        <div class="achievement-title">Code Sprint Champion</div>
+                    </div>
+                    <div class="achievement-date">October 2023</div>
+                    <div class="achievement-desc">First place in the department-wide coding competition, demonstrating exceptional problem-solving skills.</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">📝</div>
+                        <div class="achievement-title">Research Publication</div>
+                    </div>
+                    <div class="achievement-date">December 2023</div>
+                    <div class="achievement-desc">Co-authored a paper on "Efficient Algorithms for Data Processing" published in the college technical journal.</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">💡</div>
+                        <div class="achievement-title">Innovation Award</div>
+                    </div>
+                    <div class="achievement-date">February 2024</div>
+                    <div class="achievement-desc">Received recognition for developing an innovative project in the field of IoT applications during the annual tech fest.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="chart-title">Subject Area Performance</h2>
+            <div class="chart">
+                <div class="chart-bar" style="height: 85%;">
+                    <div class="chart-value">A+</div>
+                    <div class="chart-label">Programming</div>
+                </div>
+                <div class="chart-bar" style="height: 80%;">
+                    <div class="chart-value">A</div>
+                    <div class="chart-label">Theory</div>
+                </div>
+                <div class="chart-bar" style="height: 90%;">
+                    <div class="chart-value">A+</div>
+                    <div class="chart-label">Web Dev</div>
+                </div>
+                <div class="chart-bar" style="height: 75%;">
+                    <div class="chart-value">B+</div>
+                    <div class="chart-label">Networks</div>
+                </div>
+                <div class="chart-bar" style="height: 82%;">
+                    <div class="chart-value">A</div>
+                    <div class="chart-label">Databases</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Jegatheeswaran S | B.Tech Information Technology</p>
+        <p>AAA College of Engineering and Technology</p>
+        <div class="social-links">
+            <a href="#" class="social-link">📱</a>
+            <a href="#" class="social-link">📧</a>
+            <a href="#" class="social-link">🔗</a>
+            <a href="#" class="social-link">📄</a>
+        </div>
+    </footer>
+</body>
+</html>
